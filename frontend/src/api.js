@@ -6,7 +6,8 @@ import axios from 'axios';
 const api = axios.create({
 
     // Vite 规定，只有以 VITE_ 开头的变量才会暴露给前端;|| '/api'：回退机制。就是通过Vite proxy转发到后端
-    baseURL: 'http://localhost:8080', // 指向Spring Boot
+    // baseURL: 'http://localhost:8080', // 指向Spring Boot
+    baseURL: 'http://51.20.126.12:8080', // 指向Spring Boot
 });
 
 // 让其他模块可以导入并使用这个配置好的API客户端
