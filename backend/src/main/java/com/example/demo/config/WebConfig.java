@@ -21,7 +21,10 @@ public class WebConfig {
                 // "/**" 表示所有路径都应用这个 CORS 配置
                 registry.addMapping("/**")
                 // "http://localhost:5173" 是 Vite 开发服务器的默认地址
-                        .allowedOrigins("http://localhost:5173")  // React dev server
+                        .allowedOrigins(
+                            "http://localhost:5173"  // 开发环境
+                            // "http://new4test-frontend.s3-website.eu-north-1.amazonaws.com" // 生产环境
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
             }
